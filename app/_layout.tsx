@@ -1,19 +1,30 @@
+// app/_layout.tsx
 import { Stack } from 'expo-router';
 
 export default function Layout() {
   return (
-    <Stack>
-      <Stack
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}></Stack>
-      <Stack.Screen name="home" options={{ title: 'Home' }} />
+    <Stack
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#3b82f6',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}>
+      <Stack.Screen
+        name="index"
+        options={{
+          title: '🚀 งานในสายอาชีพ IT',
+        }}
+      />
+      <Stack.Screen
+        name="job/[id]"
+        options={{
+          title: 'รายละเอียดงาน',
+        }}
+      />
     </Stack>
   );
 }
